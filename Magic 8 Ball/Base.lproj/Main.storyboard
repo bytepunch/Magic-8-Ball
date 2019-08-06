@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,19 +24,46 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="nIO-jF-jSs">
+                                <rect key="frame" x="20" y="140.00000000000003" width="374" height="410.66666666666674"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdY-4X-QWH">
+                                <rect key="frame" x="20" y="802" width="374" height="60"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="Ask">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="askMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0bO-sX-uCc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.15686274509803921" green="0.66666666666666663" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="hdY-4X-QWH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1t4-KB-6DR"/>
                             <constraint firstItem="edQ-2V-Spo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="4vV-rp-1jU"/>
+                            <constraint firstItem="nIO-jF-jSs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BwR-Nq-UEq"/>
+                            <constraint firstItem="nIO-jF-jSs" firstAttribute="top" secondItem="edQ-2V-Spo" secondAttribute="bottom" constant="8" id="EGg-C0-ZlQ"/>
+                            <constraint firstAttribute="bottom" secondItem="hdY-4X-QWH" secondAttribute="bottom" constant="34" id="Evw-sH-PGs"/>
+                            <constraint firstAttribute="bottom" secondItem="hdY-4X-QWH" secondAttribute="bottom" constant="34" id="Iix-E1-jVh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hdY-4X-QWH" secondAttribute="trailing" constant="20" id="L03-ot-gsi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nIO-jF-jSs" secondAttribute="trailing" constant="20" id="blV-Pq-itA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="edQ-2V-Spo" secondAttribute="trailing" constant="20" id="ghN-pj-NTB"/>
                             <constraint firstItem="edQ-2V-Spo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rU3-tF-LVo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageViewBall" destination="nIO-jF-jSs" id="LOJ-GN-vbz"/>
+                        <outlet property="lblTitle" destination="edQ-2V-Spo" id="BMe-xv-vMk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="37.681159420289859" y="18.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ball1" width="457.66665649414062" height="410.66665649414062"/>
+    </resources>
 </document>
