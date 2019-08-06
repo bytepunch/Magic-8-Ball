@@ -14,22 +14,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var imageViewBall: UIImageView!
     
+    let ballNames = ["ball1", "ball2", "ball3", "ball4", "ball5"]
+    var randomValue : Int = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    
-    @IBAction func askMe(_ sender: Any) {
-        
-        
-        
-        
-        
+    override func becomeFirstResponder() -> Bool {
+        return true
     }
     
-
-
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        setBallByRandom()
+    }
+    
+    
+    @IBAction func askMe(_ sender: Any) {
+        setBallByRandom()
+    }
+    
+    func setBallByRandom(){
+        randomValue = Int.random(in: 0 ... ballNames.count - 1)
+        imageViewBall.image = UIImage(named: ballNames[randomValue])
+    }
 }
 
